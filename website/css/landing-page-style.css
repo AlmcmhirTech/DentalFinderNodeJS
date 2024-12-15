@@ -1,0 +1,475 @@
+:root {
+    --primary-blue: #0052FF;
+    --light-blue: #66B3FF;
+    --light-gray: #E5EDFF;
+    --text-dark: #1A1A1A;
+    --text-gray: #454040;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    line-height: 1.5;
+    color: var(--text-dark);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px, 0, 20px;
+    
+}
+
+
+
+.logo img {
+    height: auto;
+    width: 200px;
+}
+
+.login-btn {
+    background: var(--primary-blue);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.login-btn:hover {
+    background: #0045D1;
+}
+
+/* Hero Section */
+.hero {
+    padding: 160px 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background: white;
+}
+
+.hero-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 120px;
+    flex-wrap: wrap; /* Add this line */
+}
+
+.hero-left,
+.hero-right {
+    flex: 1;
+}
+
+.hero-left {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.mascot-img {
+    width: 100%; /* Change to 100% */
+    max-width: 500px; /* Add this line */
+    height: auto; /* Change to auto */
+}
+
+.hero-right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+    text-align: center; /* Add this line */
+}
+
+h1 {
+    font-size: 35px;
+    line-height: 1.2;
+    font-weight: 700;
+    color: #1A1A1A;
+    max-width: 500px;
+    text-align: center;
+}
+
+.cta-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Change to center */
+    gap: 16px;
+}
+
+
+.btn-primary {
+    background: #0052FF;
+    color: white;
+    border: none;
+    padding: 16px 110px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-primary:hover {
+    background: #0045D1;
+}
+
+.account-link {
+    color: #66B3FF;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+    padding: 8px 42px;
+    border-radius: 8px;
+    background: white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.account-link:hover {
+    background: #f5f5f5;
+}
+
+
+
+/* How it works */
+.how-it-works {
+    padding: 80px 0;
+    text-align: center;
+    background: var(--light-gray);
+}
+
+.sparkle {
+    height: 30px;
+    color: var(--primary-blue);
+    margin: 0 8px;
+}
+.check {
+    /* padding-top:10px; */
+    height: 15px;
+    color: var(--primary-blue);
+    margin: 0 8px;
+}
+
+.section-desc {
+    max-width: 600px;
+    margin: 24px auto;
+    color: var(--text-gray);
+}
+
+.more-features-grid {
+    display: flex;
+    flex-wrap: wrap; /* Add this line to allow wrapping */
+    justify-content: center;
+    gap: 24px;
+    margin-top: 48px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.see-more-p{
+    
+    color: var(--light-blue);
+    font-size: 18px;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+.see-more-p:hover{
+
+    color: var(--primary-blue);
+}
+
+.more-features-p{
+    margin-top: 15px;
+    margin-left: 14px;
+    margin-right: 14px;
+    color: var(--text-gray);
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.features-grid {
+    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px;
+    margin-top: 48px;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.feature-btn {
+    flex: 0 1 calc(50% - 12px);  /* Sets each button to half the row width minus half the gap */
+    max-width: 200px;
+    height: 65px;
+    background: white;
+    border-color: var(--primary-blue);
+    color: var(--primary-blue);
+    padding: 16px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 550;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+
+
+.feature-btn:hover {
+    background: var(--primary-blue);
+    color: white;
+}
+.text-how-it-works{
+    font-size: 42px;
+    font-weight: 650;
+}
+.box{
+    flex: 0 1 calc(50% - 12px);  /* Sets each button to half the row width minus half the gap */
+    width: 401px;
+    height: 407px;
+    background: white;
+    border-color: var(--primary-blue);
+    color: var(--primary-blue);
+    padding: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s;
+    overflow: hidden; /* Ensure text does not surpass the box */
+}
+.highlight-blue {
+    color: #1C30DB; /* Replace with the color you want */
+}
+/* Content Sections */
+.content-split {
+    display: flex;
+    gap: 48px;
+    align-items: center;
+    padding: 80px 0;
+    flex-wrap: wrap; /* Add this line to allow wrapping */
+}
+
+.quick-efficient .content-split,
+.personalized-quiz-maker .content-split {
+    flex-direction: row-reverse; /* Swap the positions of text and image */
+}
+
+.content-split > * {
+    flex: 1;
+}
+
+.text-content {
+    max-width: 500px;
+}
+
+.text-content h2 {
+    font-size: 36px;
+    margin-bottom: 24px;
+}
+
+.text-content p {
+    color: var(--text-gray);
+    
+}
+
+.btn-secondary {
+    background: transparent;
+    border: 2px solid var(--primary-blue);
+    color: var(--primary-blue);
+    padding: 20px 54px;
+    border-radius: 8px;
+    font-weight: 570;
+    cursor: pointer;
+    transition: all 0.3s;
+    
+}
+
+.btn-secondary:hover {
+    background: var(--primary-blue);
+    color: white;
+}
+
+.btn-subtitle {
+    background: transparent;
+    border: 2px solid var(--light-blue);
+    color: var(--light-blue);
+    padding: 20px 54px;
+    border-radius: 8px;
+    font-weight: 570;
+    cursor: pointer;
+    transition: all 0.3s;
+    
+}
+
+.btn-subtitle:hover {
+    background: var(--primary-blue);
+    color: white;
+}
+
+.up-meeco{
+    padding-left: 200px;
+    height: 420px;
+}
+.convert-image-meeco{
+    height: 420px;
+    width: 600px;
+}
+
+.present-png {
+    transform: rotateY(180deg); /* Flip the image horizontally to face right */
+    max-width: 100%; /* Makes the image responsive */
+    height: 420px;
+    
+}
+.head-scratch-png{
+    padding-left: 200px;
+    max-width: 100%; /* Makes the image responsive */
+    height: 420px;
+    
+}
+
+
+.laptop-img{
+    transform: rotateY(180deg); /* Flip the image horizontally to face right */
+    max-width: 100%; /* Makes the image responsive */
+    height: 420px;
+}
+
+.menu-icon {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Responsive Design */
+@media (max-width: 850px) {
+    body {
+        
+
+    }
+    .hero {
+        padding: 80px 0;
+    }
+    
+    .hero-content {
+        flex-direction: column;
+        gap: 48px;
+        text-align: center;
+    }
+    
+    .hero-left {
+        justify-content: center;
+    }
+    
+    .hero-right {
+        align-items: center;
+    }
+    
+    .cta-buttons {
+        align-items: center;
+    }
+    
+    h1 {
+        font-size: 36px;
+    }
+
+    .content-split {
+        flex-direction: column;
+        text-align: center;
+        position: relative; /* Ensure position relative */
+    }
+
+    .quick-efficient .content-split,
+    .personalized-quiz-maker .content-split {
+        flex-direction: column; /* Ensure responsiveness */
+    }
+
+    .text-content {
+        margin: 0 auto;
+        margin:0 10px  0 10px
+        
+    }
+
+    .footer-grid {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .up-meeco,
+    .head-scratch-png {
+        padding-left: 0; /* Remove padding when the page gets smaller */
+        height: 300px; /* Reduce the height of the images */
+    }
+
+    .present-png,
+    .laptop-img {
+        height: 300px; /* Reduce the height of the images */
+    }
+
+    
+
+    .mascot-img {
+        max-width: 350px;
+    }
+
+    /* Convert-image, Quiz-maker, summarizer-and-reviewer.php */
+
+    .box {
+        width: calc(100% - 32px); /* Ensure boxes do not consume full width */
+        height: auto; /* Allow height to adjust based on content */
+        margin: 0 auto; /* Center the box */
+    }
+
+    .text-more-features {
+        font-size: 24px; /* Adjust font size for smaller screens */
+    }
+
+    .more-features-p {
+        font-size: 16px; /* Adjust font size for smaller screens */
+    }
+
+    .see-more-p {
+        font-size: 16px; /* Adjust font size for smaller screens */
+    }
+
+    .more-features-grid {
+        flex-direction: column; /* Ensure wrapping on smaller screens */
+        max-width: 60%; /* Ensure it does not consume full width */
+    }
+    .convert-image-meeco{
+        height: 300px;
+        width: 400px;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    .menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 80px;
+        right: 0;
+        background: white;
+        width: 100%;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .menu.active {
+        display: flex;
+    }
+    .section-desc {
+        padding: 0 10px 0 10px;
+    }
+}
+
+
+
