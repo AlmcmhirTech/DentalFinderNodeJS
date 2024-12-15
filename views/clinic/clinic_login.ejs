@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="<%=cssFile%>">
+    
+</head>
+<body>
+<div class="login-container">
+        <div class="logo-container">
+            <img src="me.png" alt="Logo" class="logo">
+        </div>
+        <div class="login-box">
+            <button class="close-button">&times;</button>
+            <h2>Log in</h2>
+            <form id ="clinic-login-form">
+            <h5 class="E">Email</h5>  
+            <input type="text" id="email" name="email" placeholder="Email">
+            <h5 class="P">Password </h5>     
+            <input type="password" id="password" name="password" placeholder="Password">
+            <span class="text-danger" id="login-error"></span>
+                <a href="#" class="forgot-password">Forgot Password?</a>
+                <button type="submit" id = "clinic-login-button" class="login-button">Log In</button>
+                <p class="signup-text">Don't have an Account yet? <a href="register.php">Sign up</a>.</p>
+            </form>
+        </div>
+    </div>
+    <%- include('includes/website-footer') %>
+</body>
+</html>

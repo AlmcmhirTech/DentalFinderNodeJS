@@ -1,0 +1,282 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+.nav-buttons{
+    margin-left: 60%;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    padding-top: 100px;
+}
+
+h1{
+    font-size: 2.5rem;
+    font-weight: 350;
+}
+
+h2{
+    font-size: 1.8rem;
+    font-weight: 300;
+}
+
+h3{
+    font-size: 1.5rem;
+    font-weight: 800;
+}
+
+h4{
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+h5{
+    font-size: 0.7rem;
+    font-weight: 400;
+}
+
+h6{
+
+    font-weight: 300;
+    color: #D8D8D8;
+}
+
+button{
+    font-size: 0.8rem;
+    font-weight: 500;
+    outline: none;
+    border: none;
+    background-color: #1d1d1d;
+    color: #D8D8D8;
+    padding: 13px 30px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+button:hover{
+    color: #4169e1;
+}
+
+.navbar{
+    font-size: 16px;
+    padding-top: 2rem !important;
+    padding-bottom: 2rem !important;
+    top: 0;
+    left: 0;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+}
+
+.navbar-light .navbar-nav .nav-link{
+    padding: 0 20px;
+    color: #0C090A;
+    transition: 0.4s ease;
+}
+
+.navbar-light .navbar-nav .nav-link:hover,
+.navbar-light .navbar-nav .nav-link.active{
+    color: #4169e1;
+}
+
+
+@media only screen and (max-width: 990px){
+    .nav-buttons{
+        margin: 10px;
+    }
+    .nav-buttons ul{
+        margin: 2rem;
+        justify-content: flex-start;
+        align-items: flex-start;
+        text-align: left;
+    }
+    .nav-buttons ul .fas{
+        margin: 20px 5px 10px 20px;
+    }
+
+
+}
+
+
+hr{
+    width: 30px;
+    height: 3px !important;
+    opacity: 1 !important;
+    background-color: #1d1d1d;
+}
+
+
+
+footer {
+    background-color: #222222; 
+    padding: 20px 0; 
+    color: #d8d8d8;
+}
+
+footer h5 {
+    color: #d8d8d8;
+    font-weight: 500;
+    font-size: 1.2rem;
+
+}
+
+footer ul {
+    list-style: none;
+}
+
+
+footer li a {
+    font-size: 0.8rem;
+    color: #999; 
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer li a:hover {
+    color: #d8d8d8; 
+}
+
+
+.copyright a {
+    color: #000;
+    height: 40px;
+    width: 40px;
+    background-color: #fff;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center; 
+    border-radius: 50%; 
+    font-size: 0.8rem; 
+    transition: background-color 0.3s ease, color 0.3s ease; 
+    margin: 0 10px; 
+    text-decoration: none;
+}
+
+footer .copyright a:hover {
+    color: #fff; 
+    background-color: #4169e1;
+}
+
+footer p{
+    font-size: 0.9rem;
+    color:#fff;
+}
+
+footer .copyright img{
+    width: 10%;
+    border-radius: 5px;
+}
+
+.logo{
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+}
+.navbar .brand{
+    color: #4169e1;
+    margin: 3px 5px;
+    font-size: 1.5rem;
+}
+
+/* REGISTRATION FORM */
+
+#register-form{
+    width: 50%;
+    margin: 5px auto;
+    text-align: center;
+    padding: 20px;
+    border-top: 1px solid #4169e1;
+}
+
+#register-form input{
+    width: 50%;
+    margin: 5px auto;
+}
+
+#register-form select{
+    width: 50%;
+    margin: 5px auto;
+}
+
+#register-form #register-btn{
+    background-color: #4169e1;
+    color: #fff;
+}
+
+#register-form #login-url{
+    color: #4169e1;
+
+}
+
+
+/* SERVICE REGISTER */
+
+#register-form2 {
+    width: 50%;
+    margin: 5px auto;
+    text-align: left;
+    padding: 20px;
+    border-top: 1px solid #4169e1;
+    border-radius: 5px; /* Optional: adds rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Optional: adds a subtle shadow */
+}
+
+.form-group #service-offered{
+    margin-bottom: 15px; /* Space between form groups */
+}
+
+.form-group #service-offered-label {
+    display: flex; /* Use flexbox for horizontal alignment */
+
+}
+
+input[type="checkbox"] {
+    margin-right: 10px; /* Space between checkbox and label text */
+}
+
+.service-btn {
+    background-color: #4169e1;
+    color: #fff;
+    border: none; 
+    padding: 10px 20px; 
+    border-radius: 5px; 
+    cursor: pointer; 
+}
+
+.service-btn:hover {
+    background-color: #365899; 
+}
+
+
+
+/* LOGIN */
+
+#login-form{
+    width: 50%;
+    margin: 5px auto;
+    text-align: center;
+    padding: 20px;
+    border-top: 1px solid #4169e1;
+}
+#login-form input{
+    width: 80%;
+    margin: 5px auto;
+}
+
+#login-form #login-btn{
+    background-color: #4169e1;
+    color: #fff;
+}
+
+#login-form #register-url{
+    color: #4169e1;
+
+}
+
+
+#others{
+    width: 80%;
+    text-align: left;
+}

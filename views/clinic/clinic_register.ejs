@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="<%=cssFile%>">
+</head>
+<body>
+<div class="register-container">
+    <div class="logo-container">
+        <img src="me.png" alt="Logo" class="logo">
+    </div>
+    <div class="register-box">
+        <button class="close-button">&times;</button>
+        <h2>Request Clinic</h2>
+        <form id = "clinic-request" action="/clinic/sent-request" method="POST">
+
+            <h5 class="P">License</h5>
+            <input type="file" id="license" name="license">
+            <div class="text-danger" id="license-err"></div>
+
+            <h5 class="N">Name</h5>
+            <input type="text" id="name" name="name" placeholder="Clinic Name">
+            <div class="text-danger" id="name-err"></div>
+
+            <h5 class="P">Specialty</h5>
+            <select name="specialty" id="specialty">
+                <option value="">-------</option>
+                <%specialties.forEach((specialty)=> {%>
+                    <option value="<%=specialty.specialty_id%>"><%= specialty.name%></option>
+                <%})%>
+            </select>
+            <div class="text-danger" id="specialty-err"></div>
+
+            <h5 class="E">Email</h5>
+            <input type="email" id="email" name="email" placeholder="Clinic Email">
+            <div class="text-danger" id="email-err"></div>
+            <h5 class="P">Password</h5>
+            <input type="password" id="password" name="password" placeholder="Password">
+            <div class="text-danger" id="password-err"></div>
+            <h5 class="CP">Confirm Password</h5>
+            <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm Password">
+            <div class="text-danger" id="confirm-err"></div>
+            <h5 class="CP">Contact</h5>
+            <input type="phone" value ="+63" id="phone" name="phone" placeholder="Clinic Mobile Number">
+            <div class="text-danger" id="phone-err"></div>
+            <h5 class="P">Address</h5>
+            <input type="text" id="address" name="address" placeholder="Clinic Address">
+            <div class="text-danger" id="address-err"></div>
+
+            <div class ="d-flex flex-row">
+            <h5 class="P">Postcode</h5>
+            <input type="number" id="code" name="code" placeholder="Postcode">
+            <div class="text-danger" id="code-err"></div>
+            </div>
+
+
+            <h5 class="P">Village</h5>
+            <select name="village" id="village">
+                    <option value="">-------</option>
+                <%villages.forEach((village)=> {%>
+                    <option value="<%=village.village_id%>"><%= village.name%></option>
+                <%})%>
+            </select>
+            <div class="text-danger" id="village-err"></div>
+
+            <h5 class="P">Statement(Optional)</h5>
+            <input type="text" id="statement" name="statement" placeholder="Say Something">
+            <br>
+            <br>
+            <button type="submit" class="register-button">Sign Up</button>
+            <p class="login-text">Already have an Account? <a href="login.php">Log in</a>.</p>
+        </form>
+    </div>
+</div>
+<%- include('includes/website-footer') %>
+</body>
+</html>

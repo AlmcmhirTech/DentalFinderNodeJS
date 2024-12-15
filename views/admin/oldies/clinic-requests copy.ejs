@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transactions</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="<%= cssFile %>">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+</head>
+
+<body>
+    <!-- SIDEBAR -->
+    <div class="wrapper">
+        <%- include('sidebar')%>
+
+        <!-- NAVBAR -->
+        <div class="main">
+
+            <nav class="navbar navbar-expand px-4 py-3">
+                <div class="sidebar-name">
+                    <a href="#">Dental Finder</a>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item dropdown">
+                            <a href="#" class="nav-link" id="navbarDropdown">
+                                <img src="pfp.jpg" class="avatar img-fluid" alt="Profile Picture">
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><button class="dropdown-item" type="button" id="messages">Messages</button></li>
+                                <li><button class="dropdown-item" type="button" id="logout">Logout</button></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <h3 class="fw-bold fs-4 my-3">Clinic Services</h3>
+            <div>
+                <button type="button" class="btn btn-success d-flex align-items-center" data-bs-toggle="modal" data-bs-target="#addServiceModal">
+                    <i class="lni lni-circle-plus me-2"></i>
+                    Add Services
+                </button>
+                <!-- Services -->
+                <div class="modal fade" id="addServiceModal" tabindex="-1" aria-labelledby="addServiceLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="addServiceLabel">Add Services</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                          <form method = 'post' id = 'add-service-form' action = '/clinic/addservice'>
+                            
+                            <div id="select">
+                              <label for="category">Choose Services:</label>
+                                <select name="service_id" id="service" class="form-select">
+                                  <option value="">-- Select Category --</option>
+                                <% categories.forEach(category => { %>
+                                  <option value="<%= category.service_id %>"><%= category.service_name %></option>
+                                <% }); %>
+                                </select>
+                              <div class="text-danger" id="service_category_error"></div>
+                            </div>
+
+                            <div class="mt-2">
+                              <label for="service-name" class="form-label">Add New Service:</label>
+                              <input type="text" class="form-control" value='' name="service_name" id="service-name" placeholder="Enter Name of Service">
+                              <div class="text-danger" id="service_name_error"></div>
+                              <small class="text-muted">Adding services requires admin approval.</small>
+                            </div>
+                  
+                            <div class="mt-2">
+                              <label for="Price" class="form-label">Price (₱):</label>
+                              <input type="number" name="price" class="form-control" id="minPrice" placeholder="Enter Price">
+                              <div class="text-danger" id="price_error"></div>
+                            </div>
+                  
+                            <div class="mt-2">
+                              <label for="Description" class="form-label">Description:</label>
+                              <input type="text" value='' name="description" class="form-control" id="description" placeholder="Enter Description">
+                              <div class="text-danger" id="description_error"></div>
+                            </div>
+                  
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="submit" class="btn btn-primary">Add Service</button>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+
+
+            <!-- TABLE BODY -->
+            <div class="row">
+                <div class="col-12">
+                    <table class="table table-striped">
+                        <thead>
+                            <!-- TABLE HEADER -->
+                            <tr class="highlight">
+                              <th scope="col">Service Name</th>
+                              <th scope="col">Price</th>
+                              <th scope="col">Description</th>
+                              <th scope="col">Action</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                          <% services.forEach((service) =>{%> 
+                            <tr>
+                              <td><%=service.service_name%></td>
+                              <td><%=service.pricing%></td>
+                              <td><%=service.description%></td>
+                              <td>
+                                <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#editModal_<%= service.service_id %>">
+                                    Edit
+                                </button>
+
+                                  <!-- Modal -->
+                                  <div class="modal fade" id="editModal_<%= service.service_id %>" tabindex="-1" aria-labelledby="addServiceLabel" aria-hidden="true">
+                                    <div class="modal-dialog modal-lg">
+                                      <div class="modal-content">
+                                        <div class="modal-header">
+                                          <h5 class="modal-title" id="addServiceLabel">Edit Service</h5>
+                                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                          <form class = "edit-service-form">
+                                            
+                                            <div id="select">
+                                              <label for="category">Choose Services:</label>
+
+                                                <select id="category" name ="service_id" class="form-select">
+                                                  <option id = "currentValue" value="<%= service.service_id %>"><%= service.service_name %></option>
+                                                  <% categories.forEach(category => { %>
+                                                  <option class = "selectValue" value="<%= category.service_id %>"><%= category.service_name %></option>
+                                                  <% }); %>
+                                                </select>
+
+                                            </div>
+
+                                            <div class="mt-2">
+                                              <label for="Price" class="form-label">Price (₱):</label>
+                                              <input type="number" value = '<%=service.pricing%>'name = "price" class="form-control" id="minPrice" placeholder="Enter Price">
+                                            </div>
+
+                                            <div class="mt-2">
+                                              <label for="Description" class="form-label">Description:</label>
+                                              <input type="text" value = '<%=service.description%>' name = "description" class="form-control" id="description" placeholder="Enter Description">
+                                            </div>
+
+                                        </div>
+                                          <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                            <button type="submit" class="btn btn-primary" data-bs-dismiss="modal">Edit Service</button>
+                                          </div>
+                                        </form>
+                                      </div>
+                                    </div>
+                                  </div>
+                
+
+                                    <!-- DELETE BUTTON -->
+                                    <button type="button" class="btn btn-danger" data-service-id="<%= service.service_id %>" data-bs-toggle="modal" data-bs-target="#deleteServiceModal">
+                                      Delete
+                                    </button>
+                                    
+                                    <!-- Modal -->
+                                    <div class="modal fade" id="deleteServiceModal" tabindex="-1" role="dialog" aria-labelledby="deletebtnTitle" aria-hidden="true">
+                                      <div class="modal-dialog modal-dialog-centered" role="document">
+                                        <div class="modal-content">
+                                          <div class="modal-header">
+                                            <h5 class="modal-title" id="deletebtnTitle">Delete Confirmation</h5>
+                                            <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                                              <span aria-hidden="true">&times;</span>
+                                            </button>
+                                          </div>
+                                          <div class="modal-body">
+                                            Are you sure you want to delete?
+                                          </div>
+                                          <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                                            <button type="button" id="confirm-delete-btn" class="btn btn-danger">Delete</button>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                </td>
+                             
+                            </tr>
+                            <%}); %>
+
+                        </tbody>
+                </div>
+              </div>
+            <script src = "/service.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

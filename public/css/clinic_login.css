@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #FFFFFF;
+}
+.text-danger{
+    color:red;
+}
+
+.login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+    margin-top: 40px;
+}
+
+.logo-container {
+    position: absolute;
+    top: 40px;  
+    right: 200px;
+  
+}
+
+.logo {
+    width: 70px;
+    height: 70px;
+}
+
+.login-box {
+  
+    padding: 40px;
+    width: 490px;
+    border-radius: 8px;
+   
+    position: relative;
+    text-align: center;
+}
+
+.close-button {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: none;
+    border: none;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+h2 {
+    color: #0033A0;
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+.E{
+   margin-right: 340px;
+}
+.P{
+    margin-right: 320px;
+ }
+
+input[type="text"], input[type="password"] {
+    width: 100%;
+    padding: 7px;
+    margin: 10px ;
+    border: 1px solid #ddd;
+    border-radius: 7px;
+    font-size: 1em;
+}
+
+.forgot-password {
+    display: block;
+    text-align: right;
+    font-size: 0.9em;
+    color: #66B3FF;
+    text-decoration: none;
+    margin-bottom: 20px;
+}
+.forgot-password:hover{
+    color: #0033A0;
+}
+
+.login-button {
+    width: 100%;
+    padding: 7px;
+    border: none;
+    border-radius: 5px;
+    background-color: #66B3FF;
+    color: #1A1A1A;
+    font-size: 1em;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+.login-button:hover{
+    color: #FFFFFF;
+    background-color: #0033A0;
+}
+
+
+
+.signup-text a {
+    color: #66B3FF;
+    text-decoration: none;
+}
+.signup-text a:hover{
+    color: #0033A0;
+}

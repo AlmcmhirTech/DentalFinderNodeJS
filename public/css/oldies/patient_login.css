@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(to right, #f4f4f9, #d1e0e0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 80px; /* Adjust this to match the height of your navbar */
+}
+
+.box-container {
+    max-width: 400px; /* Reduced max-width for a smaller form */
+    width: 100%;
+    padding: 20px; /* Reduced padding */
+    background: #ffffff;
+    color: #333;
+    border-radius: 10px; /* Slightly smaller border-radius */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.box-container h1 {
+    font-size: 2rem; /* Reduced font size */
+    font-weight: 600; /* Slightly lighter font-weight */
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.box-container h4 {
+    font-size: 1rem; /* Reduced font size */
+    font-weight: 300;
+    margin-bottom: 20px;
+    color: #666;
+}
+
+.box-container label {
+    display: block;
+    margin-top: 10px;
+    font-size: 0.9rem; /* Reduced font size */
+    text-align: left;
+    color: #444;
+}
+
+.box-container input {
+    width: 100%;
+    padding: 8px; /* Reduced padding */
+    margin: 8px 0; /* Reduced margin */
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 0.9rem; /* Reduced font size */
+    background-color: #f8f8f8;
+    color: #333;
+    transition: border-color 0.3s;
+}
+
+.box-container input:focus {
+    border-color: #4169e1;
+    outline: none;
+}
+
+.box-container input::placeholder {
+    color: #999;
+}
+
+.forgot-remember {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0; /* Reduced margin */
+}
+
+.fpass a {
+    font-size: 0.8rem; /* Reduced font size */
+    color: #4169e1;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.fpass a:hover {
+    color: #0056b3;
+}
+
+.remember {
+    display: flex;
+    align-items: center;
+    font-size: 0.8rem; /* Reduced font size */
+    color: #333;
+}
+
+.remember input[type="checkbox"] {
+    margin-right: 8px; /* Adjust margin as needed */
+    width: 16px; /* Adjust width if needed */
+    height: 16px; /* Adjust height if needed */
+}
+
+.remember label {
+    font-size: 0.8rem; /* Reduced font size */
+    color: #333;
+    margin: 0; /* Remove default margin */
+}
+
+#Login_button {
+    width: 100%;
+    background-color: #4169e1;
+    color: white;
+    padding: 10px; /* Reduced padding */
+    font-size: 0.9rem; /* Reduced font size */
+    font-weight: 600;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-top: 15px; /* Reduced margin */
+}
+
+#Login_button:hover {
+    background-color: #0056b3;
+    transform: scale(1.02);
+}
+
+.dha {
+    margin-top: 15px; /* Reduced margin */
+    font-size: 0.8rem; /* Reduced font size */
+    color: #333;
+}
+
+.dha a {
+    color: #4169e1;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.dha a:hover {
+    text-decoration: underline;
+}
+
+
+@media (max-width: 768px) {
+    .box-container {
+        padding: 15px; /* Reduced padding for smaller screens */
+    }
+}

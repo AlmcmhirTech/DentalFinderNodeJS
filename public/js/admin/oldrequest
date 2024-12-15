@@ -1,0 +1,325 @@
+document.addEventListener('DOMContentLoaded', () => {
+const categorySelect = document.getElementById('categorySelect');
+const tableHeaders = document.getElementById('tableHeaders');
+const tableBody = document.getElementById('tableBody');
+
+console.log('Elements:', categorySelect, tableHeaders, tableBody);
+
+categorySelect.addEventListener('change', async (e) => {
+console.log('Category changed:', e.target.value);
+const selectedCategory = e.target.value;
+try {
+  const response = await fetch(`/admin/admin-dynamic-table/${selectedCategory}`);
+  console.log('Response:', response);
+  const tableData = await response.json();
+  console.log('Table data:', tableData);
+
+  tableHeaders.innerHTML = '';
+  tableBody.innerHTML = '';
+
+  if (selectedCategory === 'Branches') {
+    const headerNames = ['Pending ID', 'Clinic','License','Request Date', 'Action'];
+
+    tableHeaders.innerHTML = '';
+  
+    headerNames.forEach((name) => {
+      const th = document.createElement('th');
+      th.textContent = name;
+      tableHeaders.appendChild(th);
+    });
+  
+    tableData.forEach((row) => {
+        const rowElement = document.createElement('tr');
+        headerNames.forEach((name, index) => {
+          const td = document.createElement('td');
+          const properties = Object.values(row);
+
+          if (name === 'Action') {
+            const acceptBtn = document.createElement('button');
+            acceptBtn.textContent = 'Accept';
+            acceptBtn.id = 'accept-btn'; 
+            acceptBtn.classList.add('accept-branch-btn');
+            acceptBtn.dataset.branchpendingId = row.pending_id;
+            acceptBtn.dataset.branchAddress = row.branch_address;
+            acceptBtn.dataset.mobileNumber = row.mobile_number;
+            acceptBtn.dataset.license = row.license;
+            acceptBtn.dataset.clinicName = row.clinic_name;
+      
+            acceptBtn.addEventListener('click', () => {
+              const modal = document.getElementById('AcceptClinicModal');
+              const modalToggle = new bootstrap.Modal(modal, { keyboard: false });
+              modalToggle.show();
+            });
+    
+            const deleteBtn = document.createElement('button');
+            deleteBtn.textContent = 'Delete';
+            deleteBtn.classList.add('delete-branch-btn');
+            deleteBtn.dataset.branchpendingId = row.pending_id;
+
+            deleteBtn.addEventListener('click', () => {
+              const modal = document.getElementById('DeleteClinicModal');
+              const modalToggle = new bootstrap.Modal(modal, { keyboard: false });
+              modalToggle.show();
+            });
+    
+            td.appendChild(acceptBtn);
+            td.appendChild(deleteBtn);
+          } else {
+            td.textContent = properties[index] || '-';
+          }
+
+          rowElement.appendChild(td);
+        });
+        tableBody.appendChild(rowElement);
+      });
+  }
+  if (selectedCategory === 'Accounts') {
+    const headerNames = ['Pending ID', 'License', 'Email', 'Statement', 'Request Date', 'Action'];
+  
+    // Clear existing headers
+    tableHeaders.innerHTML = '';
+  
+    headerNames.forEach((name) => {
+      const th = document.createElement('th');
+      th.textContent = name;
+      tableHeaders.appendChild(th);
+    });
+  
+    tableData.forEach((row) => {
+        const rowElement = document.createElement('tr');
+        headerNames.forEach((name, index) => {
+          const td = document.createElement('td');
+          const properties = Object.values(row);
+
+          if (name === 'Action') {
+            const acceptBtn = document.createElement('button');
+            acceptBtn.textContent = 'Accept';
+            acceptBtn.id = 'accept-btn'; 
+            acceptBtn.classList.add('accept-clinic-btn');
+            acceptBtn.dataset.requestId = row.request_id;
+            acceptBtn.dataset.clinicName = row.clinic_name;
+            acceptBtn.dataset.License = row.license;
+            
+            acceptBtn.addEventListener('click', () => {
+              const modal = document.getElementById('AcceptClinicModal');
+              const modalToggle = new bootstrap.Modal(modal, { keyboard: false });
+              modalToggle.show();
+            });
+    
+            const deleteBtn = document.createElement('button');
+            deleteBtn.textContent = 'Delete';
+            deleteBtn.classList.add('delete-clinic-btn');
+            deleteBtn.dataset.requestId = row.request_id;
+
+            deleteBtn.addEventListener('click', () => {
+              const modal = document.getElementById('DeleteClinicModal');
+              const modalToggle = new bootstrap.Modal(modal, { keyboard: false });
+              modalToggle.show();
+            });
+    
+            td.appendChild(acceptBtn);
+            td.appendChild(deleteBtn);
+          } else {
+            td.textContent = properties[index] || '-';
+          }
+          rowElement.appendChild(td);
+        });
+        tableBody.appendChild(rowElement);
+      });
+  }
+  
+} catch (error) {
+  console.error('Error:', error);
+}
+});
+
+// Initialize table with default category
+fetch('/admin/admin-dynamic-table/Branches')
+.then((response) => {
+  console.log('Response:', response);
+  return response.json();
+})
+.then((tableData) => {
+  console.log('Table data:', tableData);
+  const headerNames = ['Request ID', 'Clinic','License','Request Date', 'Action'];
+  
+    // Clear existing headers
+    tableHeaders.innerHTML = '';
+  
+    headerNames.forEach((name) => {
+      const th = document.createElement('th');
+      th.textContent = name;
+      tableHeaders.appendChild(th);
+    });
+  
+    tableData.forEach((row) => {
+      const rowElement = document.createElement('tr');
+      headerNames.forEach((name, index) => {
+        const td = document.createElement('td');
+        const properties = Object.values(row);
+
+        if (name === 'Action') {
+          const acceptBtn = document.createElement('button');
+          acceptBtn.textContent = 'Accept';
+          acceptBtn.id = 'accept-btn'; 
+          acceptBtn.classList.add('accept-branch-btn');
+          acceptBtn.dataset.branchpendingId = row.pending_id;
+          acceptBtn.dataset.branchAddress = row.branch_address;
+          acceptBtn.dataset.mobileNumber = row.mobile_number;
+          acceptBtn.dataset.license = row.license;
+          acceptBtn.dataset.clinicName = row.clinic_name;
+    
+          acceptBtn.addEventListener('click', () => {
+            const modal = document.getElementById('AcceptClinicModal');
+            const modalToggle = new bootstrap.Modal(modal, { keyboard: false });
+            modalToggle.show();
+          });
+  
+          const deleteBtn = document.createElement('button');
+          deleteBtn.textContent = 'Delete';
+          deleteBtn.classList.add('delete-branch-btn');
+          deleteBtn.dataset.branchpendingId = row.pending_id;
+
+          deleteBtn.addEventListener('click', () => {
+            const modal = document.getElementById('DeleteClinicModal');
+            const modalToggle = new bootstrap.Modal(modal, { keyboard: false });
+            modalToggle.show();
+          });
+  
+          td.appendChild(acceptBtn);
+          td.appendChild(deleteBtn);
+        } else {
+          td.textContent = properties[index] || '-';
+        }
+
+        rowElement.appendChild(td);
+      });
+      tableBody.appendChild(rowElement);
+    });
+//ACCEPT ACOUNT PENDING
+    document.getElementById('confirm-accept-btn').addEventListener('click', async () => {
+      const acceptBtn = document.querySelector('.accept-clinic-btn');
+      if(acceptBtn){
+      const data = {
+        requestId: acceptBtn.dataset.requestId,
+        clinicName: acceptBtn.dataset.clinicName,
+        License: acceptBtn.dataset.License,
+      };
+    
+        const modal = document.getElementById('AcceptClinicModal');
+        const modalToggle = new bootstrap.Modal(modal, { keyboard: false });
+        modalToggle.show();
+    
+        try {
+          const response = await fetch(`/admin/accept-clinic`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(data)
+          });
+          if (response.ok) {
+            window.location.reload();
+          } else {
+            console.error(await response.text());
+          }
+        } catch (error) {
+          console.error(error);
+        }
+      }
+    });
+//DELETE ACCOUNT PENDING
+    document.getElementById('confirm-delete-btn').addEventListener('click', async () => {
+      const deleteBtn = document.querySelector('.delete-clinic-btn');
+      if(deleteBtn){
+      const data = {
+        requestId: deleteBtn.dataset.requestId,
+      };
+    
+        console.log(data);
+    
+        const modal = document.getElementById('DeleteClinicModal');
+        const modalToggle = new bootstrap.Modal(modal, { keyboard: false });
+        modalToggle.show();
+    
+        try {
+          const response = await fetch(`/admin/delete-clinic-request`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(data)
+          });
+          if (response.ok) {
+            window.location.reload();
+          } else {
+            console.error(await response.text());
+          }
+        } catch (error) {
+          console.error(error);
+        }
+      }
+    });
+      //ACCEPT BRANCH PENDING
+      document.getElementById('confirm-accept-btn').addEventListener('click', async () => {
+        const acceptBtn = document.querySelector('.accept-branch-btn');
+        const data = {
+          pendingId: acceptBtn.dataset.branchpendingId,
+          branchAddress: acceptBtn.dataset.branchAddress,
+          mobileNumber: acceptBtn.dataset.mobileNumber,
+          license: acceptBtn.dataset.license, 
+          clinicName: acceptBtn.dataset.clinicName,
+        };
+      
+          console.log(data);
+      
+          const modal = document.getElementById('AcceptClinicModal');
+          const modalToggle = new bootstrap.Modal(modal, { keyboard: false });
+          modalToggle.show();
+      
+          try {
+            const response = await fetch(`/admin/accept-branch`, {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify(data)
+            });
+            if (response.ok) {
+              window.location.reload();
+            } else {
+              console.error(await response.text());
+            }
+          } catch (error) {
+            console.error(error);
+          }
+      });
+  //DELETE BRANCH PENDING
+  
+      document.getElementById('confirm-delete-btn').addEventListener('click', async () => {
+        const deleteBtn = document.querySelector('.delete-branch-btn');
+        const data = {
+          pendingId: deleteBtn.dataset.branchpendingId,
+        };
+      
+      
+          const modal = document.getElementById('DeleteClinicModal');
+          const modalToggle = new bootstrap.Modal(modal, { keyboard: false });
+          modalToggle.show();
+      
+          try {
+            const response = await fetch(`/admin/delete-branch-request`, {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify(data)
+            });
+            if (response.ok) {
+              window.location.reload();
+            } else {
+              console.error(await response.text());
+            }
+          } catch (error) {
+            console.error(error);
+          }
+      });
+
+    
+})
+.catch((error) => {
+  console.error('Error:', error);
+});
+});
