@@ -1,19 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Dental Clinic Platform - FAQ</title>
     <link rel="stylesheet" href="css/faq-style.css ?v=<?php echo time(); ?>">
     <link rel="stylesheet" href="css/navbar-style.css ?v=<?php echo time(); ?>">
     <link rel="stylesheet" href="css/footer-style.css ?v=<?php echo time(); ?>">
 </head>
-    
+
 <body>
     <nav class="navbar">
         <div class="container">
             <div class="logo">
-            <a href="landing_page.php" style="text-decoration: none;"><img src="pictures/meeco-logo-text.png" alt="Meeco Logo"></a>
+                <a href="landing_page.php" style="text-decoration: none;">
+                    <img src="pictures/dental-logo.png" alt="Dental Platform Logo">
+                </a>
             </div>
             <button class="login-btn">Log In</button>
         </div>
@@ -21,7 +24,7 @@
     <div class="breadcrumb" style="font-size: 19px; font-weight: 700;">
         <p><a href="landing_page.php" style="text-decoration: none;">Home</a> > Help and Support</p>
     </div>
-<h1>Frequently Asked Questions</h1>
+    <h1>Frequently Asked Questions</h1>
     <section>
         <div class="accordion-container">
             <div class="section">
@@ -31,53 +34,27 @@
 
                 <div class="accordion-item">
                     <div class="accordion-header">
-                        <span class="accordion-title" style="font-size: 17px; font-weight:600;">What is MEECO?</span>
+                        <span class="accordion-title" style="font-size: 17px; font-weight:600;">What is this platform?</span>
                         <svg class="accordion-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <path d="M19 9l-7 7-7-7" />
                         </svg>
                     </div>
                     <div class="accordion-content">
-                        <p style="font-size: 16px; font-weight:500;">MEECO is an app designed for students that converts images to text. It also offers summarizing, reviewing, and mock quiz generation based on the uploaded topic.</p>
+                        <p style="font-size: 16px; font-weight:500;">This platform connects patients with top dental clinics, offering appointment booking, dental history management, and clinic exploration for a hassle-free experience.</p>
                     </div>
                 </div>
 
                 <div class="accordion-item">
                     <div class="accordion-header">
-                        <span class="accordion-title" style="font-size: 17px; font-weight:600;">Who is MEECO for?</span>
+                        <span class="accordion-title" style="font-size: 17px; font-weight:600;">Who is this platform for?</span>
                         <svg class="accordion-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <path d="M19 9l-7 7-7-7" />
                         </svg>
                     </div>
                     <div class="accordion-content">
-                        <p style="font-size: 16px; font-weight:500;">MEECO is designed for students, educators, and anyone looking to efficiently convert and process educational content.</p>
+                        <p style="font-size: 16px; font-weight:500;">The platform is designed for patients seeking reliable dental services and clinics aiming to streamline their appointment process and manage patient records efficiently.</p>
                     </div>
                 </div>
-
-                <div class="accordion-item">
-                    <div class="accordion-header">
-                        <span class="accordion-title" style="font-size: 17px; font-weight:600;">How does MEECO help students?</span>
-                        <svg class="accordion-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M19 9l-7 7-7-7" />
-                        </svg>
-                    </div>
-                    <div class="accordion-content">
-                        <p style="font-size: 16px; font-weight:500;">MEECO helps students by converting image-based content to text, generating summaries, and creating practice quizzes to enhance learning.</p>
-                    </div>
-                </div>
-
-                <div class="accordion-item">
-                    <div class="accordion-header">
-                        <span class="accordion-title" style="font-size: 17px; font-weight:600;">Is MEECO only for working students?</span>
-                        <svg class="accordion-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M19 9l-7 7-7-7" />
-                        </svg>
-                    </div>
-                    <div class="accordion-content">
-                        <p style="font-size: 16px; font-weight:500;">No, MEECO is designed for all students, but it is particularly useful for those with busy schedules, like working students, who need efficient study tools.
-                        </p>
-                    </div>
-                </div>
-
             </div>
         </div>
     </section>
@@ -86,119 +63,32 @@
         <div class="accordion-container">
             <div class="section">
                 <div class="section-header">
-                    <h2 class="section-title" style="font-size: 18px; font-weight:600;">App Usage and Accessibility</h2>
+                    <h2 class="section-title" style="font-size: 18px; font-weight:600;">Booking and Management</h2>
                 </div>
 
                 <div class="accordion-item">
                     <div class="accordion-header">
-                        <span class="accordion-title" style="font-size: 17px; font-weight:600;">Is MEECO available for both iOS and Android?</span>
+                        <span class="accordion-title" style="font-size: 17px; font-weight:600;">How do I book an appointment?</span>
                         <svg class="accordion-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <path d="M19 9l-7 7-7-7" />
                         </svg>
                     </div>
                     <div class="accordion-content">
-                        <p style="font-size: 16px; font-weight:500;">Yes, MEECO is available on both iOS and Android platforms.
-                        </p>
+                        <p style="font-size: 16px; font-weight:500;">To book an appointment, select your preferred dental clinic, choose a convenient date and time, and confirm your booking with just a few clicks.</p>
                     </div>
                 </div>
 
                 <div class="accordion-item">
                     <div class="accordion-header">
-                        <span class="accordion-title" style="font-size: 17px; font-weight:600;">Is there a desktop version of MEECO?</span>
+                        <span class="accordion-title" style="font-size: 17px; font-weight:600;">Can I reschedule or cancel my appointment?</span>
                         <svg class="accordion-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <path d="M19 9l-7 7-7-7" />
                         </svg>
                     </div>
                     <div class="accordion-content">
-                        <p style="font-size: 16px; font-weight:500;">At the moment, MEECO is available as a mobile app, but a desktop version may be considered for future updates.</p>
+                        <p style="font-size: 16px; font-weight:500;">Yes, you can easily reschedule or cancel your appointment through the platform. Simply log in, go to your bookings, and select the appropriate option.</p>
                     </div>
                 </div>
-
-                <div class="accordion-item">
-                    <div class="accordion-header">
-                        <span class="accordion-title" style="font-size: 17px; font-weight:600;">Does MEECO work offline?</span>
-                        <svg class="accordion-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M19 9l-7 7-7-7" />
-                        </svg>
-                    </div>
-                    <div class="accordion-content">
-                        <p style="font-size: 16px; font-weight:500;">MEECO requires an internet connection for uploading images and using its advanced features, but once content is generated, it can be saved for offline use.</p>
-                    </div>
-                </div>
-
-                <div class="accordion-item">
-                    <div class="accordion-header">
-                        <span class="accordion-title" style="font-size: 17px; font-weight:600;">Is there a limit to the number of images I can upload?</span>
-                        <svg class="accordion-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M19 9l-7 7-7-7" />
-                        </svg>
-                    </div>
-                    <div class="accordion-content">
-                        <p style="font-size: 16px; font-weight:500;">This depends on your subscription plan. The free version may have limits, while premium users might have access to unlimited uploads.
-                        </p>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <section>
-        <div class="accordion-container">
-            <div class="section">
-                <div class="section-header">
-                    <h2 class="section-title" style="font-size: 18px; font-weight:600;">Account and Subscription</h2>
-                </div>
-
-                <div class="accordion-item">
-                    <div class="accordion-header">
-                        <span class="accordion-title" style="font-size: 17px; font-weight:600;">Is MEECO free to use?</span>
-                        <svg class="accordion-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M19 9l-7 7-7-7" />
-                        </svg>
-                    </div>
-                    <div class="accordion-content">
-                        <p style="font-size: 16px; font-weight:500;">MEECO offers a free version with basic features. Premium features, like unlimited mock quizzes and advanced review guides, are available in the paid version.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="accordion-item">
-                    <div class="accordion-header">
-                        <span class="accordion-title" style="font-size: 17px; font-weight:600;">What payment methods are accepted for premium subscriptions?</span>
-                        <svg class="accordion-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M19 9l-7 7-7-7" />
-                        </svg>
-                    </div>
-                    <div class="accordion-content">
-                        <p style="font-size: 16px; font-weight:500;">MEECO accepts major credit cards, PayPal, and other popular payment gateways depending on your region.</p>
-                    </div>
-                </div>
-
-                <div class="accordion-item">
-                    <div class="accordion-header">
-                        <span class="accordion-title" style="font-size: 17px; font-weight:600;">Can I cancel my subscription at any time?</span>
-                        <svg class="accordion-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M19 9l-7 7-7-7" />
-                        </svg>
-                    </div>
-                    <div class="accordion-content">
-                        <p style="font-size: 16px; font-weight:500;">Yes, you can cancel your premium subscription anytime, and you will retain access to premium features until the billing cycle ends.</p>
-                    </div>
-                </div>
-
-                <div class="accordion-item">
-                    <div class="accordion-header">
-                        <span class="accordion-title" style="font-size: 17px; font-weight:600;">Does MEECO offer a free trial for premium features?</span>
-                        <svg class="accordion-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M19 9l-7 7-7-7" />
-                        </svg>
-                    </div>
-                    <div class="accordion-content">
-                        <p style="font-size: 16px; font-weight:500;">Yes, MEECO offers a limited free trial for users to explore the premium features before committing to a subscription.
-                    </div>
-                </div>
-
             </div>
         </div>
     </section>
@@ -212,41 +102,15 @@
 
                 <div class="accordion-item">
                     <div class="accordion-header">
-                        <span class="accordion-title" style="font-size: 17px; font-weight:600;">How secure is my data on MEECO?</span>
+                        <span class="accordion-title" style="font-size: 17px; font-weight:600;">How secure is my data on this platform?</span>
                         <svg class="accordion-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <path d="M19 9l-7 7-7-7" />
                         </svg>
                     </div>
                     <div class="accordion-content">
-                        <p style="font-size: 16px; font-weight:500;">MEECO uses encryption to protect your data, ensuring that all personal and study-related content remains private and secure.
-                        </p>
+                        <p style="font-size: 16px; font-weight:500;">Your data is protected using advanced encryption protocols to ensure the privacy and security of your information.</p>
                     </div>
                 </div>
-
-                <div class="accordion-item">
-                    <div class="accordion-header">
-                        <span class="accordion-title" style="font-size: 17px; font-weight:600;">Is my uploaded content stored on MEECO servers?</span>
-                        <svg class="accordion-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M19 9l-7 7-7-7" />
-                        </svg>
-                    </div>
-                    <div class="accordion-content">
-                        <p style="font-size: 16px; font-weight:500;">Yes, your content is temporarily stored on MEECO servers for processing. However, you have control over whether this data is saved or deleted after use.</p>
-                    </div>
-                </div>
-
-                <div class="accordion-item">
-                    <div class="accordion-header">
-                        <span class="accordion-title" style="font-size: 17px; font-weight:600;">Does MEECO sell my data to third parties?</span>
-                        <svg class="accordion-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M19 9l-7 7-7-7" />
-                        </svg>
-                    </div>
-                    <div class="accordion-content">
-                        <p style="font-size: 16px; font-weight:500;">No, MEECO does not sell or share user data with third parties without consent. Your privacy is a top priority.</p>
-                    </div>
-                </div>
-
             </div>
         </div>
     </section>
@@ -260,43 +124,20 @@
 
                 <div class="accordion-item">
                     <div class="accordion-header">
-                        <span class="accordion-title" style="font-size: 17px; font-weight:600;">How can I contact support if I encounter issues?</span>
+                        <span class="accordion-title" style="font-size: 17px; font-weight:600;">How can I contact support?</span>
                         <svg class="accordion-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <path d="M19 9l-7 7-7-7" />
                         </svg>
                     </div>
                     <div class="accordion-content">
-                        <p style="font-size: 16px; font-weight:500;">You can reach out to MEECO’s support team through the app or the official website via email or live chat.
+                        <p style="font-size: 16px; font-weight:500;">For any issues, you can reach out to our support team via email or live chat available on the platform.</p>
                     </div>
                 </div>
-
-                <div class="accordion-item">
-                    <div class="accordion-header">
-                        <span class="accordion-title" style="font-size: 17px; font-weight:600;">Where can I provide feedback or request new features?</span>
-                        <svg class="accordion-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M19 9l-7 7-7-7" />
-                        </svg>
-                    </div>
-                    <div class="accordion-content">
-                        <p style="font-size: 16px; font-weight:500;">MEECO values user feedback! You can submit suggestions or request features through the "Feedback" option in the app settings.</p>
-                    </div>
-                </div>
-
-                <div class="accordion-item">
-                    <div class="accordion-header">
-                        <span class="accordion-title" style="font-size: 17px; font-weight:600;">Is there a user guide or tutorial available?</span>
-                        <svg class="accordion-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M19 9l-7 7-7-7" />
-                        </svg>
-                    </div>
-                    <div class="accordion-content">
-                        <p style="font-size: 16px; font-weight:500;">Yes, MEECO includes an in-app tutorial that guides new users through the features, along with a help section for troubleshooting common issues.</p>
-                    </div>
-                </div>
-
             </div>
         </div>
     </section>
+
     <script src="js/faq.js"></script>
 </body>
+
 </html>
